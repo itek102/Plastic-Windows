@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Ноя 26 2016 г., 00:59
+-- Время создания: Ноя 26 2016 г., 02:38
 -- Версия сервера: 5.6.26-log
 -- Версия PHP: 5.6.12
 
@@ -19,6 +19,27 @@ SET time_zone = "+00:00";
 --
 -- База данных: `mytest`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `general`
+--
+
+CREATE TABLE IF NOT EXISTS `general` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parametr` varchar(255) NOT NULL,
+  `value` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп данных таблицы `general`
+--
+
+INSERT INTO `general` (`id`, `parametr`, `value`) VALUES
+(1, 'mail', 'info@butovo-okna.ru'),
+(2, 'tel', '+7 (495) 123-79-97');
 
 -- --------------------------------------------------------
 
