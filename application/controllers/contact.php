@@ -1,7 +1,8 @@
 <?php
+include('general.php');
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Contact extends CI_Controller {
+class Contact extends general {
 
 	/**
 	 * Index Page for this controller.
@@ -20,8 +21,9 @@ class Contact extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['navigation'] = $this->navigation();
 		$this->load->view('top_view');
-		$this->load->view('top_nav');
+		$this->load->view('top_nav',$data);
 		$this->load->view('contact_view');
 		$this->load->view('bottom_nav');
 		$this->load->view('bottom_view');

@@ -10,10 +10,10 @@
                 </div>
                 <div class="col-lg-6">
                     <ul class="nav">
-                        <li class="nav-item"><a href="#">Пластиковые окна</a></li>
-                        <li class="nav-item"><a class='active-item' href="#">Остекление балконов</a></li>
-                        <li class="nav-item"><a href="#">О компании</a></li>
-                        <li class="nav-item"><a href="#">Контакты</a></li>
+                         <? foreach ($navigation as $item):?>
+                        <li class="nav-item"><a href="<?=base_url().$item['controller']?>"><?=$item['title']?></a></li>
+                        
+                    <? endforeach; ?>
                     </ul>
                 </div>
                 <div class="col-lg-4">

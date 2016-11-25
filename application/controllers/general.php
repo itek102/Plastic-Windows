@@ -1,8 +1,7 @@
 <?php
-include('general.php');
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends general {
+class General extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,19 +18,11 @@ class Welcome extends general {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
+function navigation() {
+	$this->db->order_by('position', 'ASC');
+	$query = $this->db->get('navigation');
+	return $query->result_array();
 
-
-	public function index()
-	{
-		$data['navigation'] = $this->navigation();
-		$this->load->view('top_view');
-		$this->load->view('top_nav',$data);
-		$this->load->view('slide_view');
-		$this->load->view('work_view');
-		$this->load->view('gallery_view');
-		$this->load->view('recall_view');
-		$this->load->view('bottom_nav');
-		$this->load->view('bottom_view');
-	}
+}
 
 }
