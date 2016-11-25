@@ -302,6 +302,9 @@ p.client-recall {
     color: #819603;
     font-size: 20px;
 }
+.green-title {
+    color: #819603;
+}
 
 p.clockwork {
     color: #909090;
@@ -350,4 +353,57 @@ form.contact-form {
 
 .contact {
     padding: 0;
+}
+
+.catalog {
+	background-image: url(../images/catalog/bg.jpg);
+	background-size: cover;
+}
+
+.item2 {
+    display: inline-block;
+    width: 274px;
+    text-align: center;
+}
+.title-cat {
+	margin-bottom: 60px;
+}
+
+p.cat-plastic {
+    text-align: center;
+    font-family: MyfontMedium;
+    height: 16px;
+}
+
+.cat-title {
+    font-family: MyfontMedium;
+    font-size: 17px;
+    text-align: center;
+}
+
+.btn-cat-next {
+    padding: 4px 55px;
+    font-size: 16px;
+    font-family: MyfontMedium;
+}
+
+.about-window-blue {
+    color: #377bb5;
+}
+
+.about-window-margin {
+    margin: 20px 0;
+    font-family: MyfontLight;
+    font-size: 20px;
+    border-bottom: 1px dashed #819603;
+}
+
+p.about-window-text {
+    font-size: 16px;
+    font-family: MyfontLight;
+    margin: 20px 0;
+}
+
+.about-window {
+    padding-bottom: 60px;
 }
