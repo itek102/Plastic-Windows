@@ -4,9 +4,9 @@
             <span class="green-text">Адрес:</span><br>
             <p>г. Москва, ул. Московская д 125, офис 32</p>
             <span class="green-text">Телефон:</span><br>
-            <span class="blue-text">+7 (495) 1213-79-97</span><br>            
+            <span class="blue-text"><?=$gen['tel']?></span><br>            
             <span class="green-text">Email:</span><br>
-            <p>info@butovo-okna.ru</p>
+            <p><?=$gen['mail']?></p>
             <p class='clockwork'>Мы работаем ежедневно с 9:00 до 18:00</p>
         </div>
         <div class="col-lg-6 contact-right">

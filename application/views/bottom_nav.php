@@ -19,7 +19,7 @@
                 <div class="col-lg-4">
                     <div class="dop-text">Работаем ежедневно с 9:00 до 18:00</div>
                     <div class="dop-text2">Заказать звонок</div>
-                    <div class="dop-text3">+7 (495) 123 72-97</div>
+                    <div class="dop-text3"><?=$gen['tel']?></div>
                 </div>
             </div>
         </div>

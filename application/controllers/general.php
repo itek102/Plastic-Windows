@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class General extends CI_Controller {
 
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -22,6 +23,17 @@ function navigation() {
 	$this->db->order_by('position', 'ASC');
 	$query = $this->db->get('navigation');
 	return $query->result_array();
+
+}
+
+public function generals() {
+	$query = $this->db->get('general');
+	
+	foreach ($query->result() as $item) {
+	$data[$item->parametr] = $item->value;
+	}
+	return $data;
+
 
 }
 

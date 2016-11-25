@@ -20,9 +20,9 @@ class Welcome extends general {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-
 	public function index()
 	{
+		$data['gen'] = $this->generals();
 		$data['navigation'] = $this->navigation();
 		$this->load->view('top_view');
 		$this->load->view('top_nav',$data);

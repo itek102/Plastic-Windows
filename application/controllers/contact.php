@@ -21,6 +21,7 @@ class Contact extends general {
 	 */
 	public function index()
 	{
+		$data['gen'] = $this->generals();
 		$data['navigation'] = $this->navigation();
 		$this->load->view('top_view');
 		$this->load->view('top_nav',$data);
