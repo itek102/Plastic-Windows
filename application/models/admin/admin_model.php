@@ -2,9 +2,17 @@
 
 class admin_model extends CI_Model {
     
-    function get_material() {
-        $query = $this->db->get('materials');
-        return $query->result_array();
-    }
+      function login($login,$pass) {
+
+$this->db->where('login', $login);
+$this->db->where('passwd', $pass);
+$query = $this->db->get('user');
+if($query->num_rows() > 0){
+  return true;
+}else {
+  return false;
+}
+}
+
     
 }
