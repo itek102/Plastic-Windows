@@ -2,7 +2,7 @@
         <div class="col-lg-6 contact-left">
             <h3 class="title-work our-work">Контакты</h3>
             <span class="green-text">Адрес:</span><br>
-            <p>г. Москва, ул. Московская д 125, офис 32</p>
+            <p><?=$gen['adress']?></p>
             <span class="green-text">Телефон:</span><br>
             <span class="blue-text"><?=$gen['tel']?></span><br>            
             <span class="green-text">Email:</span><br>

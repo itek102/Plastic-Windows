@@ -26,6 +26,16 @@ function navigation() {
 
 }
 
+function slider() {
+	$this->db->order_by('position', 'ASC');
+	$query = $this->db->get('slider');
+	return $query->result_array();
+}
+function slider_num() {
+	$query = $this->db->get('slider');
+	return $query->num_rows();
+}
+
 public function generals() {
 	$query = $this->db->get('general');
 	

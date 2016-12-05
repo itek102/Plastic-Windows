@@ -6,7 +6,7 @@
                     <div class="col-lg-6">
                         <a href="<?=base_url();?>"><img src="<?=base_url();?>images/logo.PNG" class="img-responsive" alt=""></a>
                     </div>
-                    <div class="col-lg-6 title-logo"><span class="blue-title-logo">НАЗВАНИЕ</span><br> КОМПАНИИ</div>
+                    <div class="col-lg-6 title-logo"><?=$gen['sitename'];?></div>
                 </div>
                 <div class="col-lg-6">
                     <ul class="nav">
@@ -24,3 +24,4 @@
             </div>
         </div>
     </div>
+    <a href="#" class="scrollup"><i class='glyphicon glyphicon-chevron-up'></i></a>

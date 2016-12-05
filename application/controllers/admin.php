@@ -33,7 +33,7 @@ if($check == TRUE){
 
 $ses_data = array('user' => $login);
 $this->session->set_userdata($ses_data);
-echo 'Success!';
+$this->load->view('admin/content_view');
 }
 	
 			}
@@ -44,7 +44,37 @@ echo 'Success!';
 			}
 			
 		} else {
-			echo 'Yes session';
+			$this->load->view('admin/top_view');
+			$this->load->view('admin/content_view');
+			$this->load->view('admin/bottom_view');
 		}
+	}
+
+	public function base_setting() {
+		if ($this->input->post('save')) {
+			$query = $this->db->get('general');
+			$query = $query->result();
+			foreach ($query as $item) {
+				$data['value'] = $this->input->post($item->parametr);
+				$this->db->where('parametr',$item->parametr);
+				$this->db->update('general',$data);
+			}
+			$this->session->set_flashdata('update', '1');
+		}
+			$query = $this->db->get('general');
+			$data['general'] = $query->result_array();
+			$data['update'] = $this->session->flashdata('update');
+			$this->load->view('admin/top_view');
+			$this->load->view('admin/bs_view',$data);
+			$this->load->view('admin/bottom_view');
+	}
+
+	public function slider() {
+		$this->db->order_by('position','ASC');
+		$query = $this->db->get('slider');
+		$data['slider'] = $query->result_array();
+		$this->load->view('admin/top_view');
+			$this->load->view('admin/slider_view',$data);
+			$this->load->view('admin/bottom_view');
 	}
 }

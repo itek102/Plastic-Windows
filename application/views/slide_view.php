@@ -1,34 +1,23 @@
  <div id="carousel" class="carousel slide">
         <!--Индикаторы слайдов-->
         <ol class="carousel-indicators">
-            <li class="active" data-target="#carousel" data-slide-to="0"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
+            <?
+                         for($i=0; $i<$slider_num; $i++){
+                            echo '<li class="gallery-indicator" data-target="#carousel" data-slide-to="'.$i.'"></li>';
+                         }?>
         </ol>
         
         <!--Слайды-->
         <div class="carousel-inner">
-            <div class="item active">
-                <img src="images/slide/1.jpg" alt="">
+            <? foreach ($slider as $item): ?>
+            <div class="item gallery-img">
+                <img src="images/slide/<?=$item['img'];?>" alt="">
                 <div class="carousel-caption">
-                    <h3 class='slide-title'>Первый слайд</h3>
-                    <p class='slide-description'>Небольшое описание специального предложения, которое находится в слайдере, возможно это будет акция!</p>
+                    <h3 class='slide-title'><?=$item['title'];?></h3>
+                    <p class='slide-description'><?=$item['description'];?></p>
                 </div>
             </div>
-            <div class="item">
-                <img src="images/slide/1.jpg" alt="">
-                <div class="carousel-caption">
-                    <h3 class='slide-title'>Второй слайд</h3>
-                    <p class='slide-description'>Небольшое описание специального предложения, которое находится в слайдере, возможно это будет акция!</p>
-                </div>
-            </div>
-            <div class="item">
-                <img src="images/slide/1.jpg" alt="">
-                <div class="carousel-caption">
-                    <h3 class='slide-title'>Третий слайд</h3>
-                    <p class='slide-description'>Небольшое описание специального предложения, которое находится в слайдере, возможно это будет акция!</p>
-                </div>
-            </div>
+        <? endforeach; ?>
         </div>
 
         <!--Стрелки переключения слайдов-->
@@ -40,3 +29,10 @@
         </a>
     </div>
     <div class="col-lg-12 border-slide"><img class="img-responsive" src="images/border-lide.PNG" alt=""></div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+    $('.gallery-img').eq(0).addClass('active');
+    $('.gallery-indicator').eq(0).addClass('active');
+});
+    </script>

@@ -12,7 +12,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="<?=base_url();?>css/bootstrap.css" rel="stylesheet">
     <link href="<?=base_url();?>css/font-awesome.css" rel="stylesheet">
     <link href="<?=base_url();?>css/style.css" rel="stylesheet">
-
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

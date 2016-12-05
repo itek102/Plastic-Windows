@@ -24,6 +24,8 @@ class Welcome extends general {
 	{
 		$data['gen'] = $this->generals();
 		$data['navigation'] = $this->navigation();
+		$data['slider_num'] = $this->slider_num();
+		$data['slider'] = $this->slider();
 		$this->load->view('top_view');
 		$this->load->view('top_nav',$data);
 		$this->load->view('slide_view');
