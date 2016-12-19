@@ -47,4 +47,10 @@ public function generals() {
 
 }
 
+function catalog() {
+	$this->db->order_by('position', 'ASC');
+	$query = $this->db->get('catalog');
+	return $query->result_array();
+}
+
 }

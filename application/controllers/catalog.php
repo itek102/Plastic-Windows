@@ -23,6 +23,7 @@ class Catalog extends general {
 	{
 		$data['gen'] = $this->generals();
 		$data['navigation'] = $this->navigation();
+		$data['catalog'] = $this->catalog();
 		$this->load->view('top_view');
 		$this->load->view('top_nav',$data);
 		$this->load->view('catalog_view');
