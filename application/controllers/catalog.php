@@ -33,5 +33,13 @@ class Catalog extends general {
 		$this->load->view('bottom_view');
 	}
 
+	function description() {
+		$id = $this->input->post('id');
+		$this->db->where('id',$id);
+		$query = $this->db->get('catalog');
+		$data['description'] = $query->result_array();
+		$this->load->view('modal_view',$data);
+	}
+
 
 }
